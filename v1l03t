@@ -1,0 +1,34 @@
+#!/bin/bash
+clear
+./.banner
+subofsub=$2
+read -p " Enter the Domain name  : " dm
+read -p " Enter the company name : " cm 
+mkdir ~/recon/$cm &> /dev/null
+mkdir ~/recon/$cm/v1l03t &> /dev/null
+
+if  [ $subofsub = "sub" ]&> /dev/null ;
+  then
+      echo "Brute forcing subdomains of subdomains" 
+      while read sub ;
+         do 
+           echo "$sub.$dm" >> v.txt
+           while read subl ;
+              do
+                echo "$sub.$subl" >> subv.txt
+              done < $3
+	done < $1  
+
+	cd ~/recon/$cm/v1l03t
+	cat ~/tools/v1l03t/subv.txt | xargs -n1 -P500 bash ~/tools/v1l03t/.v1l03t
+	rm ~/tools/v1l03t/subv.txt
+else
+  echo "Subdomain Brute forcing started " 
+  while read sub ;
+     do 
+       echo "$sub.$dm" >> v.txt 
+     done < $1
+  cd ~/recon/$cm/v1l03t
+  cat ~/tools/v1l03t/v.txt | xargs -n1 -P500 bash ~/tools/v1l03t/.v1l03t
+  rm ~/tools/v1l03t/v.txt
+fi
