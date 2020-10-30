@@ -1,5 +1,6 @@
 # v1l03t
-Find subdomains and subdomains of subdomains in fastest way 
+
+# Find subdomains and subdomains of subdomains in fastest way 
 
 
 ![alt text](https://github.com/karthi-the-hacker/v1l03t/raw/main/anime.gif)
@@ -17,10 +18,15 @@ its pure bash ❤️️
 6. chmod +x .banner
 7. chmod +x .v1l03t
 
+# Sample usage :
+
+![alt text](https://github.com/karthi-the-hacker/v1l03t/raw/main/basic.png)
+
+
 # Syntax :
 
 # For basic subdomain bruteforce 
-      # ./v1l03t subdomain.txt 
+      ./v1l03t subdomain.txt 
        
 # Finding subdomains of subdomains 
       ./v1l03t subdomain.txt sub ~/recon/(your company name)/v1l03t/v1l03t.txt
