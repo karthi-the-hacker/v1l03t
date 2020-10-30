@@ -19,11 +19,11 @@ its pure bash ❤️️
 
 # Syntax :
 
-1. For basic subdomain bruteforce 
+# For basic subdomain bruteforce 
       # ./v1l03t subdomain.txt 
        
-2. Finding subdomains of subdomains 
-      # ./v1l03t subdomain.txt sub ~/recon/(your company name)/v1l03t/v1l03t.txt
+# Finding subdomains of subdomains 
+      ./v1l03t subdomain.txt sub ~/recon/(your company name)/v1l03t/v1l03t.txt
       
 # Happy hacking 💀
 # Jai Hind 🇮🇳
