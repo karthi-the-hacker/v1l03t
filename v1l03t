@@ -1,6 +1,8 @@
 #!/bin/bash
 clear
 ./.banner
+rm v.txt &> /dev/null
+rm subv.txt &> /dev/null
 subofsub=$2
 read -p " Enter the Domain name  : " dm
 read -p " Enter the company name : " cm 
